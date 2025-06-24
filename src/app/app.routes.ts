@@ -4,6 +4,6 @@ import { Register } from './Pages/Register/register/register';
 
 export const routes: Routes = [
     { path :'',redirectTo:'login',pathMatch:'full'},
-    { path:'login',component:Login},
-    { path:'register',component:Register}
+    { path: 'login', component: Login },        // ✅ fixed
+  { path: 'register', component: Register } 
 ];
