@@ -1,0 +1,30 @@
+<div class="d-flex min-vh-100">
+  <!-- Sidebar -->
+  <aside
+    class="bg-white border-end p-3"
+    style="width: 260px;"
+    [ngClass]="{ 'd-none': !sidebarVisible }"
+  >
+    <div class="text-center mb-4">
+      <img src="assets/tasklogo1.png" width="80" />
+      <h5 class="mt-2 mb-0">Task Manager</h5>
+    </div>
+    <nav class="nav flex-column">
+      <a routerLink="/home/dashboard" class="nav-link mb-2">📊 Dashboard</a>
+      <a routerLink="/home/manage-tasks" class="nav-link mb-2">🗂️ Manage Tasks</a>
+      <a routerLink="/home/create-task" class="nav-link mb-2">➕ Create Task</a>
+      <a routerLink="/home/team" class="nav-link mb-2">👥 Team Members</a>
+      <a routerLink="/login" class="nav-link mb-2">🚪 Logout</a>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="flex-fill p-4 bg-light">
+    <!-- Toggle Button -->
+    <button class="btn btn-outline-secondary mb-3" (click)="toggleSidebar()">
+      {{ sidebarVisible ? 'Hide Sidebar' : 'Show Sidebar' }}
+    </button>
+
+    <router-outlet></router-outlet>
+  </main>
+</div>

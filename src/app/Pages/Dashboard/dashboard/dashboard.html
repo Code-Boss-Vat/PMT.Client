@@ -1,0 +1,32 @@
+<div class="mb-4">
+  <h2>Hii , Welcome to PMT</h2>
+  <p class="text-muted">Wednesday 25th Jun 2025</p>
+
+  <div class="d-flex flex-wrap gap-3">
+    <div class="card p-3 flex-fill shadow-sm">🔢 <strong>18</strong> Total Tasks</div>
+    <div class="card p-3 flex-fill shadow-sm text-warning">⏳ <strong>11</strong> Pending</div>
+    <div class="card p-3 flex-fill shadow-sm text-primary">🚧 <strong>5</strong> In Progress</div>
+    <div class="card p-3 flex-fill shadow-sm text-success">✅ <strong>2</strong> Completed</div>
+  </div>
+</div>
+
+<div class="row mt-4">
+  <div class="col-md-6">
+    <div class="card p-3 shadow-sm">
+      <h5>Task Distribution</h5>
+      <canvas baseChart
+              [data]="doughnutChartData"
+              [type]="doughnutChartType">
+      </canvas>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card p-3 shadow-sm">
+      <h5>Task Priority Levels</h5>
+      <canvas baseChart
+              [data]="barChartData"
+              [type]="barChartType">
+      </canvas>
+    </div>
+  </div>
+</div>
